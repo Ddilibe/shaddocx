@@ -1,5 +1,6 @@
 from pytube import YouTube, Playlist
 from bs4 import BeautifulSoup
+from typing import Union
 import requests
 import re
 
@@ -19,9 +20,9 @@ class YouTubeDownLoad:
     """
 
     def __init__(    
-        self, url, audio_only=False, progressive=True, file_extension="MP4", resolution="360p", save_directory="C:\\Users\\Dilibe\\Downloads",
-        itag=22, filename=None
-    ):
+        self, url: str, audio_only: bool = False, progressive: bool = True, file_extension: str = "MP4", resolution: str = "360p", save_directory: str = "C:\\Users\\Dilibe\\Downloads",
+        itag: int =22, filename: Union[str, None]=None
+    ) -> None:
         self.url, self.audio_only, self.progressive = url, audio_only, progressive
         self.file_extension, self.resolution = file_extension, resolution
         self.save_directory, self.itag, self.filename = save_directory, itag, filename
