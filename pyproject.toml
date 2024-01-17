@@ -3,6 +3,7 @@
 requires = [
     "pytube",
     "urllib3",
+    "psutil",
     "requests",
     "validators",
     "setuptools",
